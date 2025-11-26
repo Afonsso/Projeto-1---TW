@@ -5,12 +5,11 @@
   font-style: normal;
 }
 body{
-    margin: 0%;
+    margin: 0;
     background-color: #350000;
     color: #FFD700;
     font-family: "Lato", sans-serif;
 }
-
 /*navbar*/
 
 nav{
@@ -21,11 +20,14 @@ background: #1a0000;
 border-radius: 5px;
 padding: 10px 20px;
 box-sizing:border-box;
+opacity: 70%;
 }
-#titulo{
-display: flex;
-align-items: center;
-gap: 20px;
+#Logotipo{
+width: 300px;
+height: 100px;
+}
+#Logotipo:hover{
+   transform: scale(1.05); 
 }
 #links{
 display: flex;
@@ -52,9 +54,67 @@ padding: 0%;
     transform:  scale(1.05);
     
 }
-#Hamburguer{
+#Hamburguer,h1{
     display:none;
+    display:none;
+    height: 50px;
+    width: 50px;
+    align-self:flex-end;
 }
+@media (max-width: 768px) {
+    /* Menu */
+    #titulo, #links {
+        display: none;
+    }
+    #Hamburguer {
+        display: flex;
+    }}
+
+@media (max-width: 1024px) {
+    #conteudo_principal {
+        grid-template-columns: 1fr !important; /* Só 1 coluna */
+        grid-template-rows: auto !important; /* Linhas automáticas */
+        gap: 40px; /* Mais espaço entre elementos */
+    }
+
+    /* TODOS os elementos ocupam a coluna 1 */
+    #conteudo-sur,
+    #imagem-sur,
+    #conteudo-obj,
+    #imagem-obj,
+    #conteudo-atua,
+    #imagem-atua {
+        grid-column-start: 1 !important;
+        grid-column-end: 2 !important;
+    }
+    
+    /* REORGANIZAR A ORDEM DAS LINHAS */
+    #conteudo-sur {
+        grid-row: 1 !important;
+        margin-top: 20px !important;
+    }
+    #imagem-sur {
+        grid-row: 2 !important;
+        margin-top: 0 !important;
+    }
+    #conteudo-obj {
+        grid-row: 3 !important;
+        margin-top: 20px !important;
+    }
+    #imagem-obj {
+        grid-row: 4 !important;
+        margin-top: 0 !important;
+    }
+    #conteudo-atua {
+        grid-row: 5 !important;
+        margin-top: 20px !important;
+    }
+    #imagem-atua {
+        grid-row: 6 !important;
+        margin-top: 0 !important;
+    }
+}
+
 #conteudo_principal {
     display: grid;
     grid-template-columns:1fr 1fr;
@@ -101,15 +161,37 @@ padding: 0%;
 #conteudo_principal img {
     max-width: 500px;
     margin-bottom: 0px;
-    margin-left: 200px;
+    margin-left: 70px;
+   
     border-radius: 5px;
     display: block;
-    height: auto;
-   
+    height: auto;   
 }
 #conteudo-sur, #conteudo-obj,#conteudo-atua{
+    margin-top: 100px;
     background: rgba(255, 204, 0, 0.1);
     border-radius: 20px;
-    padding: 20px;
+    padding: 50px;
+    
+}
+#imagem-sur,#imagem-obj,#imagem-atua{
+margin-top: 100px;
+padding: 20px;
+}
 
+
+/* ZOOM quando passa o rato */
+#conteudo-sur:hover,
+#conteudo-obj:hover,
+#conteudo-atua:hover
+ {
+    transform: translate(30px, -5px) ;  /* Direita 30px, cima 5px, aumenta 5% */
+    margin-left: 10px;                             /* Desloca mais para a direita */
+    padding: 45px;                                 /* Aumenta o padding (tamanho interno) */
+}
+
+#conteudo-sur:hover ~ #imagem-sur img,
+#conteudo-obj:hover ~ #imagem-obj img,
+#conteudo-atua:hover ~ #imagem-atua img {
+    transform: translate(-30px,-5px) ;  /* Desce imagem 30px e aumenta 8% */
 }
