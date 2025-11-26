@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body{
+    margin: 0%;
+    background-color: #350000;
+    color: #FFD700;
+    font-family: "Lato", sans-serif;
+}
+
+/*navbar*/
+
+nav{
+display: flex;
+justify-content: space-between;/*Um item no inicio outro no fim*/
+align-items:center;
+background: #1a0000;
+border-radius: 5px;
+padding: 10px 20px;
+box-sizing:border-box;
+}
+#titulo{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+#links{
+display: flex;
+gap:20px;
+list-style: none;/* sem o ponto de marcação*/
+border-radius: 5px;
+margin: 0%;
+padding: 0%;
+}
+#links li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: transparent;
+    box-sizing:border-box;
+    
+}
+#links a{
+    color: #ffcc00;
+}
+#links li:hover {
+    border-color: #ffcc00;
+    background: rgba(255, 204, 0, 0.1);/* cor para dar um toqe de amarelo no fundo do link*/
+    transform:  scale(1.05);
+    
+}
+#Hamburguer{
+    display:none;
+}
+#conteudo_principal {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap:10px;
+    padding: 20px;
+}
+#conteudo-sur{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#imagem-sur{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#conteudo-obj{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#imagem-obj{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+#conteudo-atua{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:3;
+    grid-row-end:4 ;
+}
+#imagem-atua{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start:3;
+    grid-row-end:4 ;
+}
+#conteudo_principal img {
+    max-width: 500px;
+    margin-bottom: 0px;
+    margin-left: 200px;
+    border-radius: 5px;
+    display: block;
+    height: auto;
+   
+}
+#conteudo-sur, #conteudo-obj,#conteudo-atua{
+    background: rgba(255, 204, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+
+}

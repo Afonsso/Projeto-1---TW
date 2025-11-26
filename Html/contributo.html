@@ -9,7 +9,10 @@
 <body>
   <header>
 <nav>
-<ul>
+<div id="titulo">
+<h1>Falcão</h1>
+</div>
+<ul id="links">
 <li><a href="index.html">História</a></li>
 <li><a href="fundacao.html">Fundação Radamel Falcão</a></li>
 <li><a href="contributo.html">Contribuição para a Fundação Radamel Falcão</a></li>
@@ -20,38 +23,50 @@
 </nav>
 </header>
 <main><br><br><br>
-<section id="formulario">
-    <form action="#" method="post">
-    
-    <label for="nome">Nome completo:</label>
-    <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome completo"><br>
+<section class="form-container">
+  <form action="#" method="post">
 
-    <label for="email">E-mail de contacto:</label>
-    <input type="email" id="email" name="email" required placeholder="Digite o seu e-mail"><br>
+    <div class="form-group">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome completo">
+      </div>
 
-    <label for="tipo">Tipo de contributo:</label>
-    <select id="tipo" name="tipo" required>
-      <option value="">Selecione uma opção</option>
-      <option value="doacao">Doação financeira 💰</option>
-      <option value="voluntariado">Voluntariado 🤝</option>
-      <option value="parceria">Parceria institucional 🏢</option>
-      <option value="outro">Outro ✉️</option>
-    </select><br>
+      <div class="form-group">
+          <label for="email">E-mail de contacto:</label>
+          <input type="email" id="email" name="email" required placeholder="Digite o seu e-mail">
+      </div>
 
-    <label for="valor">Valor da contribuição(se selecionado opção Doação financeira):</label>
-    <input type="text" id="valor" name="valor" placeholder="Exemplo: 50 €"><br>
+      <div class="form-group">
+        <label for="tipo">Tipo de contributo:</label>
+          <select id="tipo" name="tipo" class="opcoes" required>
+            <option value="" class="opcoes">Selecione uma opção</option>
+            <option value="doacao" class="opcoes">Doação financeira </option>
+            <option value="voluntariado" class="opcoes">Voluntariado </option>
+            <option value="parceria" class="opcoes">Parceria institucional </option>
+            <option value="outro" class="opcoes">Outro </option>
+          </select>
+      </div>
 
-    <label for="mensagem">Mensagem / Comentário:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem"></textarea><br>
+      <div class="form-group">
+        <label for="valor">Valor da contribuição (se aplicável):</label>
+        <input type="text" id="valor" name="valor" placeholder="Exemplo: 50 €">
+       </div>
 
-    <div class="checkbox">
-      <input type="checkbox" id="termos" name="termos" required>
-      <label for="termos">Confirmo que os meus dados podem ser utilizados apenas para contacto e gestão do contributo.</label><br>
-    </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem / Comentário:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem"></textarea>
+        </div>
 
-    <button type="submit">Enviar contributo</button>
-  </form>
+        <div class="checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Confirmo que os meus dados podem ser utilizados apenas para contacto e gestão do contributo.</label>
+        </div>
+
+        <button type="submit" ><a href="index.html">Enviar contributo</a></button>
+
+    </form>
 </section>
+
 </main>  
 </body>
 </html>
